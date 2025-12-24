@@ -13,9 +13,7 @@ Tugas Analisis Statistik: Deskriptif, Korelasi, dan Regresi
 
 Pada bagian ini, jelaskan secara singkat dataset yang Anda gunakan. Apa saja variabel di dalamnya? Apa tujuan dari analisis yang Anda lakukan?
 
-*Contoh:*
-> Dataset yang digunakan adalah data startup saas yang berisi informasi tentang `...`. Variabel kunci dalam dataset ini meliputi `Pendapatan_Tahunan_Miliar_IDR`, `Biaya_Akusisi_Pelanggan_Juta_IDR`, dan `Nilai_Pelanggan_Juta_IDR`. Tujuan dari proyek ini adalah untuk memahami karakteristik data melalui statistik deskriptif, menguji hubungan antara `Pendapatan_Tahunan_Miliar_IDR` dan `Biaya_Akusisi_Pelanggan_Juta_IDR` melalui analisis korelasi, serta memprediksi `Nilai_Pelanggan_Juta_IDR` menggunakan `Pendapatan_Tahunan_Miliar_IDR` sebagai prediktor melalui analisis regresi.
-
+Dataset yang digunakan adalah data startup saas yang berisi informasi tentang kinerja finansial dan operasional dari 650 perusahaan. Variabel kunci dalam dataset ini meliputi Pendapatan_Tahunan_Miliar_IDR, Biaya_Akuisisi_Pelanggan_Juta_IDR, dan Nilai_Pelanggan_Juta_IDR. Tujuan dari proyek ini adalah untuk memahami karakteristik data melalui statistik deskriptif, menguji hubungan antara Pendapatan_Tahunan_Miliar_IDR dan Biaya_Akuisisi_Pelanggan_Juta_IDR melalui analisis korelasi, serta memprediksi Biaya_Akuisisi_Pelanggan_Juta_IDR menggunakan Pendapatan_Tahunan_Miliar_IDR sebagai prediktor melalui analisis regresi.
 ---
 
 ## 3. Struktur Proyek
@@ -75,7 +73,7 @@ Rentang Luas Tanpa Outlier Ekstrem: Dengan Range sebesar 65.89 Miliar IDR, data 
 
 Struktur Data yang Simetris: Kedekatan antara nilai Mean (31.88) dan Median (31.30) mempertegas bahwa sebaran data ini seimbang di kedua sisi. Data pendapatan ini tidak "miring" ke arah kaya atau miskin, melainkan membentuk distribusi yang stabil di sepanjang garis pendapatan.
 - **Visualisasi (Histogram/Boxplot):**
-  - *Sematkan gambar plot dari folder /results :* [Histogram Pendapatan Tahunan](results/histogram_Pendapatan_Tahunan_Miliar_IDR.png)
+  - *Sematkan gambar plot dari folder /results :* [Histogram Pendapatan Tahunan](results/histogram_2.jpeg)
   - *Interpretasi:* Berdasarkan hasil pengamatan pada histogram pendapatan yang telah saya buat, berikut adalah beberapa wawasan utama mengenai bentuk distribusi data tersebut:
 Interpretasi Visualisasi Histogram
 Bentuk Distribusi Seragam (Nearly Uniform): Visualisasi menunjukkan bahwa frekuensi di setiap rentang pendapatan (bin) relatif stabil dari angka 0 hingga sekitar 65 Miliar IDR. Hal ini mengindikasikan bahwa jumlah entitas atau subjek penelitian yang memiliki pendapatan rendah, menengah, maupun tinggi memiliki proporsi yang hampir sama banyak. Data ini tidak mengikuti pola kurva lonceng (Normal) yang biasanya menumpuk secara dominan di nilai tengah.
@@ -92,8 +90,10 @@ Representasi Data: Nilai Median sebesar 31.30 Miliar IDR menjadi parameter yang 
 
 Karakteristik Distribusi: Bentuk Q-Q Plot yang mendatar di bagian tengah dan melengkung di ujung mengonfirmasi temuan sebelumnya bahwa data ini lebih cenderung mengikuti distribusi seragam (uniform), di mana frekuensi pendapatan tersebar merata tanpa penumpukan di angka rata-rata
 - **Plot Q-Q:**
-  - *Sematkan gambar plot dari folder /results...*
-  - *Interpretasi:* Apakah titik-titik data mengikuti garis lurus? Apa artinya?
+  - *Sematkan gambar plot dari folder /results...* [Histogram Pendapatan Tahunan](results/histogram_3.jpeg)
+  - *Interpretasi:* Observasi Titik Data: Titik-titik data (sampel) tidak mengikuti garis merah putus-putus yang merupakan garis normal teoritis. Titik-titik tersebut justru membentuk pola lengkungan yang mendatar di tengah dan melengkung tajam di kedua ujungnya, menyerupai bentuk huruf "S" yang memanjang.
+Arti Pola Tersebut: Ketidaksesuaian antara titik sampel dengan garis lurus ini berarti bahwa data pendapatan tahunan tidak terdistribusi secara normal. Dalam statistik, pola "S" seperti ini mengindikasikan bahwa distribusi data memiliki karakteristik light-tailed atau lebih cenderung mengikuti distribusi seragam (uniform), di mana nilai-nilainya tersebar merata tanpa adanya penumpukan yang dominan di sekitar nilai rata-rata (mean).
+Konsekuensi Analisis: Karena data tidak mengikuti garis lurus (tidak normal), maka asumsi normalitas untuk pengujian statistik parametrik tertentu tidak terpenuhi. Hal ini mengharuskan saya untuk lebih berhati-hati dalam memilih metode analisis selanjutnya, seperti mempertimbangkan penggunaan uji non-parametrik agar hasil kesimpulan tetap akurat.
 
 ### 5.3. Analisis Korelasi
 - **Nilai Koefisien Korelasi:**
@@ -102,8 +102,8 @@ Karakteristik Distribusi: Bentuk Q-Q Plot yang mendatar di bagian tengah dan mel
 
 Kekuatan Hubungan (Sangat Kuat): Dengan nilai r mencapai 0.98, hubungan ini dikategorikan sebagai korelasi positif yang sangat kuat. Indikasi kekuatan ini juga terlihat sangat jelas pada visualisasi scatter plot, di mana titik-titik data (berwarna biru) berada sangat rapat dan menempel pada garis tren linear berwarna merah. Hampir tidak ditemukan penyimpangan atau titik yang berada jauh dari garis tren tersebut, menunjukkan ketergantungan antar variabel yang sangat tinggi.
 - **Visualisasi (Scatter Plot):**
-  - *Sematkan gambar plot dari folder /results...*
-  - *Interpretasi:* Apakah pola pada scatter plot mendukung hasil koefisien korelasi?
+  - *Sematkan gambar plot dari folder /results...* [Histogram Pendapatan Tahunan](results/histogram_4.jpeg)
+  - *Interpretasi:* Kesesuaian dengan Nilai Korelasi: Pola pada scatter plot sangat mendukung hasil koefisien korelasi yang sangat kuat ($r = 0.98$).Linearitas Data: Titik-titik data (berwarna biru) membentuk pola garis lurus yang sangat jelas dan konsisten, mulai dari nilai pendapatan rendah hingga tinggi.Kedekatan dengan Garis Tren: Hampir seluruh titik data berada sangat rapat dan menempel pada garis tren linear berwarna merah. Hal ini menunjukkan bahwa hubungan antara Pendapatan Tahunan dan Biaya Akuisisi Pelanggan memiliki variasi atau penyimpangan (error) yang sangat kecil.Arah Hubungan: Pola yang naik dari kiri bawah ke kanan atas secara visual mengonfirmasi adanya hubungan positif. Artinya, model visual ini secara akurat merepresentasikan temuan numerik bahwa setiap peningkatan pada pendapatan akan diikuti oleh peningkatan biaya akuisisi pelanggan secara proporsional.
 
 ### 5.4. Analisis Regresi
 - **Model Regresi:**
@@ -115,9 +115,16 @@ Slope (b1 = 2.45): Nilai ini merupakan koefisien kemiringan yang menunjukkan bes
   - *Nilai R-squared :* 0.96
   - *Interpretasi:* Berdasarkan hasil perhitungan model, nilai R-squared adalah 0.96 atau sebesar 96 persen. Hal ini berarti bahwa 96 persen variasi dari variabel dependen, yaitu Biaya Akuisisi Pelanggan, dapat dijelaskan secara akurat oleh variabel independen, yaitu Pendapatan Tahunan, melalui model regresi ini. Sisanya sebesar 4 persen dijelaskan oleh faktor-faktor lain di luar model yang saya buat. Nilai yang mendekati angka 1 ini menunjukkan bahwa model regresi yang saya gunakan memiliki tingkat kecocokan yang sangat tinggi dalam menggambarkan hubungan antara kedua variabel tersebut.
 - **Visualisasi (Garis Regresi pada Scatter Plot):**
-  - *Sematkan gambar plot dari folder /results...*
-  - *Interpretasi:* Jelaskan bagaimana garis regresi merepresentasikan hubungan antara variabel.
+  - *Sematkan gambar plot dari folder /results...* [Histogram Pendapatan Tahunan](results/histogram_5.jpeg)
+  - *Interpretasi:* Arah dan Tren Linear: Garis merah solid pada grafik menunjukkan tren linear yang sangat jelas. Kemiringan garis yang bergerak naik dari kiri bawah ke kanan atas merepresentasikan hubungan positif, yang berarti setiap peningkatan pada Pendapatan Tahunan akan diikuti secara konsisten oleh peningkatan Biaya Akuisisi Pelanggan.
+Akurasi Model (Fitting Data): Garis tersebut merepresentasikan "garis kecocokan terbaik" (best-fit line) yang meminimalkan jarak antara titik-titik data aktual dengan garis prediksi. Karena hampir seluruh titik data biru menempel sangat rapat pada garis merah, ini menunjukkan bahwa model regresi tersebut memiliki tingkat akurasi yang luar biasa dalam menangkap pola hubungan di lapangan.
+Interpretasi Nilai R-squared: Berdasarkan keterangan pada visualisasi, model ini memiliki nilai Adjusted R-squared sebesar 0.991. Angka ini memberikan wawasan bahwa garis regresi tersebut mampu menjelaskan 99.1% variasi yang terjadi pada Biaya Akuisisi Pelanggan berdasarkan variabel Pendapatan Tahunan. Hal ini menandakan model sangat handal untuk digunakan sebagai alat prediksi.
+Konsistensi Hubungan: Garis lurus yang tidak berkelok menunjukkan bahwa hubungan antara kedua variabel bersifat stabil di seluruh rentang data, mulai dari pendapatan rendah (di bawah 20 Miliar) hingga pendapatan tinggi (di atas 60 Miliar).
 ---
 ## 6. Kesimpulan
 
 Rangkum temuan utama dari analisis Anda dalam beberapa kalimat. Apa wawasan paling penting yang Anda peroleh?
+Analisis menunjukkan bahwa meskipun pendapatan perusahaan tersebar secara merata tanpa mengikuti pola distribusi normal, terdapat hubungan linear yang sangat konsisten dan kuat antara pendapatan dengan biaya akuisisi pelanggan. Model regresi yang dibangun terbukti memiliki akurasi prediksi yang sangat tinggi (96%-99%), di mana setiap pertumbuhan pendapatan sebesar 1 Miliar IDR secara terukur akan meningkatkan biaya akuisisi sebesar 2.45 Juta IDR.
+
+Wawasan Paling Penting (Key Insight)
+Wawasan paling krusial dari proyek ini adalah predibilitas biaya terhadap pertumbuhan. Hubungan korelasi yang mencapai 0.98 menunjukkan bahwa biaya akuisisi pelanggan bukan merupakan variabel liar, melainkan komponen yang bergerak sejajar dengan skala pendapatan. Bagi manajemen, ini berarti ekspansi bisnis dapat direncanakan dengan sangat presisi secara finansial; perusahaan dapat menghitung anggaran pemasaran yang dibutuhkan secara akurat untuk mencapai target pendapatan tertentu tanpa khawatir adanya lonjakan biaya yang tidak terduga di luar model regresi ini.
