@@ -73,7 +73,7 @@ Rentang Luas Tanpa Outlier Ekstrem: Dengan Range sebesar 65.89 Miliar IDR, data 
 
 Struktur Data yang Simetris: Kedekatan antara nilai Mean (31.88) dan Median (31.30) mempertegas bahwa sebaran data ini seimbang di kedua sisi. Data pendapatan ini tidak "miring" ke arah kaya atau miskin, melainkan membentuk distribusi yang stabil di sepanjang garis pendapatan.
 - **Visualisasi (Histogram/Boxplot):**
-  - *Sematkan gambar plot dari folder /results :* [Histogram Pendapatan Tahunan](result histogram 2.jpeg)
+  - *Sematkan gambar plot dari folder /results :* [Histogram Pendapatan Tahunan](results/histogram_2.jpeg)
   - *Interpretasi:* Berdasarkan hasil pengamatan pada histogram pendapatan yang telah saya buat, berikut adalah beberapa wawasan utama mengenai bentuk distribusi data tersebut:
 Interpretasi Visualisasi Histogram
 Bentuk Distribusi Seragam (Nearly Uniform): Visualisasi menunjukkan bahwa frekuensi di setiap rentang pendapatan (bin) relatif stabil dari angka 0 hingga sekitar 65 Miliar IDR. Hal ini mengindikasikan bahwa jumlah entitas atau subjek penelitian yang memiliki pendapatan rendah, menengah, maupun tinggi memiliki proporsi yang hampir sama banyak. Data ini tidak mengikuti pola kurva lonceng (Normal) yang biasanya menumpuk secara dominan di nilai tengah.
